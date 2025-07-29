@@ -29,6 +29,7 @@ public class BankAccountModel extends RepresentationModel<BankAccountModel> impl
     private int accountNumber;
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int agencyNumber;
+    private String type;
     private BigDecimal balance;
     private LocalDate createdAt;
 
