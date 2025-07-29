@@ -5,11 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -31,10 +33,8 @@ public class BankAccountModel extends RepresentationModel<BankAccountModel> impl
     private int agencyNumber;
     private String type;
     private BigDecimal balance;
-    private LocalDate createdAt;
+    @CreationTimestamp
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
 
-    @Transient
-    public int getDate() {
-        return LocalDate.now().getYear() - this.getCreatedAt().getYear();
-    }
 }
