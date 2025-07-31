@@ -1,6 +1,7 @@
 package com.heitor.Bank.Transaction.Model;
 
 import com.heitor.Bank.BankAccount.Model.BankAccountModel;
+import com.heitor.Bank.Transaction.Utils.TransactionType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

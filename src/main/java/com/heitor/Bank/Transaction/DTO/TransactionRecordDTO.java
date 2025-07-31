@@ -1,6 +1,6 @@
 package com.heitor.Bank.Transaction.DTO;
 
-import com.heitor.Bank.Transaction.Model.TransactionType;
+import com.heitor.Bank.Transaction.Utils.TransactionType;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
